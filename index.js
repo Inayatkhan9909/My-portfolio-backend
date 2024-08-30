@@ -13,6 +13,15 @@ app.use(bodyparser.json());
 
 // Routes
 
+app.get('/', (req, res) => {
+  res.send('Hey this is my API running 🥳')
+})
+
+app.get('/about', (req, res) => {
+  res.send('This is my about route..... ')
+})
+
+
 app.post('/PersonalDetails',multerMid, PersonalDetails);
 
 app.listen(PORT, () => {
