@@ -9,12 +9,12 @@ const PORT = process.env.PORT || 5000;
 
 app.use(cors());
 app.use(bodyparser.json());
-
+app.use(express.static('public'))
 
 // Routes
 
 app.get('/', (req, res) => {
-  res.send('Hey this is my API running 🥳')
+  res.sendFile('index.html', {root: path.join(__dirname, 'public')});
 })
 
 app.get('/about', (req, res) => {
