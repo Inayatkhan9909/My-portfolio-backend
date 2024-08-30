@@ -9,6 +9,7 @@ const PersonalDetailsSchema = new mongoose.Schema({
   },
   email: { 
     type: String, 
+    unique:true,
     required: [true, "Email is required"], 
     trim: true, 
     lowercase: true, 
@@ -25,18 +26,6 @@ const PersonalDetailsSchema = new mongoose.Schema({
   profilepicurl: { 
     type: String, 
     required: [true, "profile image is required"],  
-  },
-  cabtype: { 
-    type: String, 
-    required: [true, "Cab type is required"], 
-    enum: ["Swift dzire", "Honda Amaze", "Crysta", "Innova", "Traveler"], 
-    trim: true 
-  },
-  persons: { 
-    type: Number, 
-    required: [true, "Number of persons is required"], 
-    min: [1, "At least one person is required"], 
-    max: [15, "Maximum 15 persons allowed"] 
   },
   skills: [],
   projects: [{
