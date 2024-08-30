@@ -18,6 +18,14 @@ const PersonalDetailsSchema = new mongoose.Schema({
     type: String, 
     required: [true, "Linkedin profile is required"],  
   },
+  githubprofile: { 
+    type: String, 
+    required: [true, "Github profile is required"],  
+  },
+  profilepicurl: { 
+    type: String, 
+    required: [true, "profile image is required"],  
+  },
   cabtype: { 
     type: String, 
     required: [true, "Cab type is required"], 
