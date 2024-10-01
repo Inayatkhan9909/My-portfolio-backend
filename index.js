@@ -14,11 +14,12 @@ app.use(express.static('public'))
 // Routes
 
 app.get('/', (req, res) => {
-  res.sendFile('index.html', {root: path.join(__dirname, 'public')});
+  // res.sendFile('index.html', {root: path.join(__dirname, 'public')});
+  res.send('This is my about route..... ')
 })
 
 app.get('/about', (req, res) => {
-  res.send('This is my about route..... ')
+   res.send('This is my about route..... ')
 })
 
 
@@ -28,4 +29,4 @@ app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
 
-module.exports = app
+
